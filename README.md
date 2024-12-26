@@ -79,22 +79,22 @@ The Pong Game is a modern implementation of the classic arcade game, developed u
 ### **Steps to Build and Run**
 1. Clone the project repository:
    ```bash
-   git clone <repository-url>
+   git clone <https://github.com/ahmedashrafk13/Pong-Game>
    ```
 
 2. Navigate to the project directory:
    ```bash
-   cd pong-game
+   cd Pong-Game
    ```
 
 3. Compile the project:
    ```bash
-   g++ -o PongGame main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+   g++ -o Pong-Game task.cpp -lsfml-graphics -lsfml-window -lsfml-system
    ```
 
 4. Run the executable:
    ```bash
-   ./PongGame
+   ./Pong-Game
    ```
 
 ### **Deployment Instructions**
