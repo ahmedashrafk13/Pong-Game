@@ -1,100 +1,118 @@
-Pong Game 
-Welcome to Pong Game, a modern reimagining of the classic arcade game! Built with C++ and powered by the SFML library, this game brings smooth gameplay, interactive visuals, and exciting features that make it enjoyable for players of all skill levels.
+# Pong Game
 
-Whether you want to challenge yourself against an AI opponent or compete with a friend in multiplayer mode, this game has something for everyone!
+## Group Members
+1. Ahmed Ashraf
+2. Muhammad Somaan
+3. Ahmed Ali
 
-Features ✨
-Gameplay Modes
-Single-Player Mode:
+---
 
-Face off against a computer-controlled paddle with adjustable difficulty levels.
-Hone your skills and test your reflexes!
-Multiplayer Mode:
+## Brief Project Description
+The Pong Game is a modern implementation of the classic arcade game, developed using C++ and the SFML (Simple and Fast Multimedia Library). Our project recreates the nostalgic gameplay with enhanced visuals and customizable features, while maintaining the simplicity and competitiveness of the original game. Designed for both single-player and multiplayer modes, the game offers an immersive experience for players.
 
-Play with a friend on the same device, with split-screen controls.
-Perfect for competitive matches and friendly rivalries.
-Customization
-Score Limit Options: Choose the winning score (15, 25, or 40 points).
-Timer Mode: Play for a fixed duration and compete to achieve the highest score.
-User Interface
-Welcome Screen: Navigate through intuitive options for playing, viewing credits, or exiting the game.
-Mode Selection Screen: Choose your desired gameplay mode and set the score limit or timer mode.
-Credits Screen: View acknowledgments for the game development and contributors.
-Additional Features
-Restart Functionality: Easily reset the game and return to the welcome screen.
-Dynamic Button Effects: Buttons change color when hovered over or clicked, providing a polished and interactive experience.
-Smooth Ball Physics: The ball bounces realistically off paddles and walls, creating an engaging challenge.
-Installation and Setup 🛠️
-Follow these steps to install and run the Pong Game on your system:
+---
 
-1. Prerequisites
-C++ Compiler: Ensure you have a compiler like GCC or MSVC installed.
-SFML Library: Download and install SFML (Simple and Fast Multimedia Library).
-2. Clone the Repository
-Clone the repository from GitHub:
+## Features of the Game
+1. **Welcome Window**:
+   - Displays the title and three buttons: Play, Credits, and Exit.
+   - Buttons have hover effects and functional click events.
 
-bash
-Copy code
-git clone https://github.com/ahmedashrafk13/Pong-Game.git  
-cd pong-game  
-3. Build the Game
-Using Makefile:
-bash
-Copy code
-make  
-Manual Compilation:
-bash
-Copy code
-g++ -o pong main.cpp -lsfml-graphics -lsfml-window -lsfml-system  
-4. Run the Game
-Execute the game binary:
+2. **Single-player and Multiplayer Modes**:
+   - Single-player mode: AI-controlled right paddle.
+   - Multiplayer mode: Player-controlled right paddle with arrow keys.
 
-bash
-Copy code
-./pong  
-How to Play 🎮
-Controls
+3. **Credits Screen**:
+   - Lists the names of the developers.
+   - Includes a back button to return to the Welcome Window.
 
-Player 1:
-Move Up: W
-Move Down: S
+4. **Gameplay Mechanics**:
+   - Smooth paddle movement controlled via keyboard.
+   - Dynamic ball movement with customizable speeds.
+   - Real-time score tracking for both players.
 
-Player 2:
-Move Up: Up Arrow
-Move Down: Down Arrow
+5. **Restart Functionality**:
+   - Resets all game elements including paddle positions, scores, and ball states.
 
-Exit: Press Escape to exit to the main menu.
+6. **Timer Mode** (optional):
+   - Allows timed matches to add variety to gameplay.
 
-Objective
+---
 
-Single-Player Mode: Defeat the AI paddle by scoring the target number of points before it does.
+## Architecture/Structure of the Game
+### **Main Components**
+1. **Welcome Screen**:
+   - Title and buttons for navigation.
+   - Managed via `show_welcome_window()` function.
 
-Multiplayer Mode: Outplay your opponent by reaching the score limit or outscoring them in timer mode.
+2. **Credits Window**:
+   - Displays developer information.
+   - Managed via `show_credits_window()` function.
 
+3. **Game Mechanics**:
+   - Paddle movement handled by `handle_paddle_movement()`.
+   - Ball behavior and collision detection are implemented in the game loop.
 
-Development 🛠️
-Code Structure
-task.cpp: The entry point of the game, managing game logic and UI rendering.
+4. **Restart Functionality**:
+   - Resets the game environment using `restart_game()`.
 
-Game Logic: Handles paddle movement, ball physics, scoring, and resetting.
+5. **Game Loop**:
+   - Central logic for ball movement, scoring, and game state updates.
+   - Includes rendering of game elements on the screen.
 
-UI Components: Implements the welcome screen, mode selection window, and credits screen.
+### **Key Components and Variables**
+- **Window Management**: Utilizes SFML for rendering and event handling.
+- **Game Objects**:
+  - `left_paddle` and `right_paddle` for player paddles.
+  - `balls` array for ball instances and movement logic.
+- **Game States**:
+  - `is_singleplayer` for mode selection.
+  - `left_score` and `right_score` for score tracking.
 
-Key Features Implemented
+---
 
-Paddle Movement: Responsive controls for both single-player and multiplayer modes.
+## How to Run and Deploy the Project
+### **Prerequisites**
+1. Install a C++ compiler (e.g., GCC or MSVC).
+2. Install the SFML library:
+   - Follow installation instructions from the official SFML website: [https://www.sfml-dev.org](https://www.sfml-dev.org).
 
-Ball Physics: Realistic collision detection and response for engaging gameplay.
+### **Steps to Build and Run**
+1. Clone the project repository:
+   ```bash
+   git clone <repository-url>
+   ```
 
-Interactive UI: Hover and click effects for buttons, enhancing user experience.
+2. Navigate to the project directory:
+   ```bash
+   cd pong-game
+   ```
 
-Fork this repository.
-Create a new branch for your feature:
-bash
-Copy code
-git checkout -b feature-name  
-Commit your changes and push to your branch.
-Open a Pull Request with a description of your changes.
-License 📜
-This project is licensed under the MIT License. Feel free to use, modify, and distribute it as long as proper credit is given.
+3. Compile the project:
+   ```bash
+   g++ -o PongGame main.cpp -lsfml-graphics -lsfml-window -lsfml-system
+   ```
+
+4. Run the executable:
+   ```bash
+   ./PongGame
+   ```
+
+### **Deployment Instructions**
+1. Package the compiled executable along with necessary SFML library files.
+2. Distribute the package with a README or setup instructions.
+3. For Windows users, create a `.exe` file with SFML DLLs bundled.
+4. For Linux users, ensure dependencies are installed or use static linking.
+
+---
+
+## Additional Notes
+- **Customization**: Modify game parameters like ball speed or paddle size in the source code.
+- **Future Enhancements**:
+  - Improved AI for single-player mode.
+  - Additional game modes like power-ups or obstacles.
+- **Bug Reporting**: Please report issues via the project repository or contact the developers directly.
+
+---
+
+Enjoy the game!
 
