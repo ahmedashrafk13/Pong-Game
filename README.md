@@ -89,7 +89,7 @@ The Pong Game is a modern implementation of the classic arcade game, developed u
 
 3. Compile the project:
    ```bash
-   g++ -o Pong-Game task.cpp -lsfml-graphics -lsfml-window -lsfml-system
+   g++ -o Pong Game Final task.cpp -lsfml-graphics -lsfml-window -lsfml-system
    ```
 
 4. Run the executable:
