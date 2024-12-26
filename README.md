@@ -35,7 +35,7 @@ Clone the repository from GitHub:
 
 bash
 Copy code
-git clone https://github.com/yourusername/pong-game.git  
+git clone https://github.com/ahmedashrafk13/Pong-Game.git  
 cd pong-game  
 3. Build the Game
 Using Makefile:
