@@ -339,9 +339,9 @@ void show_difficulty_window(RenderWindow& window, Font& gameFont) {
 void adjust_ballspeed(size_t ballIndex) {
     // Set the ball speed based on the difficulty level
     switch (difficulty) {
-    case 0: ball_speed = 1.0f; break; // Easy difficulty
-    case 2: ball_speed = 1.8f; break; // Hard difficulty
-    default: ball_speed = 1.5f; break; // Medium or default difficulty
+    case 0: ball_speed = 0.8f; break; // Easy difficulty
+    case 2: ball_speed = 1.6f; break; // Hard difficulty
+    default: ball_speed = 1.2f; break; // Medium or default difficulty
     }
 
     // Apply the speed adjustment to all balls
