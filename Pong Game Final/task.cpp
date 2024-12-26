@@ -197,16 +197,16 @@ void initialize_game() {
     float initialspeed;
     switch (difficulty) {
     case 0: 
-        initialspeed = 3.0f; // Easy difficulty
+        initialspeed = 0.8f; // Easy difficulty
         break;
     case 1: 
-        initialspeed = 5.0f; // Medium difficulty
+        initialspeed = 1.2f; // Medium difficulty
         break;
     case 2: 
-        initialspeed = 7.0f; // Hard difficulty
+        initialspeed = 1.6f; // Hard difficulty
         break;
     default: 
-        initialspeed = 5.0f; // Default to medium difficulty
+        initialspeed = 1.3f; // Default to medium difficulty
         break;
     }
 
@@ -362,9 +362,9 @@ float adjust_paddle_speed() {
     case 0: // Easy difficulty
         return paddle_speed; // Slower paddle for easier gameplay
     case 2: // Hard difficulty
-        return paddle_speed + 2.0f; // Faster paddle for harder gameplay
+        return paddle_speed + 1.5f; // Faster paddle for harder gameplay
     default: // Medium or default difficulty
-        return paddle_speed + 1.0f; // Default speed for medium difficulty
+        return paddle_speed + 0.8f; // Default speed for medium difficulty
     }
 }
 
