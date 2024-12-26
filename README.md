@@ -5,12 +5,12 @@
 2. Muhammad Somaan
 3. Ahmed Ali
 
----
+
 
 ## Brief Project Description
 The Pong Game is a modern implementation of the classic arcade game, developed using C++ and the SFML (Simple and Fast Multimedia Library). Our project recreates the nostalgic gameplay with enhanced visuals and customizable features, while maintaining the simplicity and competitiveness of the original game. Designed for both single-player and multiplayer modes, the game offers an immersive experience for players.
 
----
+
 
 ## Features of the Game
 1. **Welcome Window**:
@@ -36,7 +36,7 @@ The Pong Game is a modern implementation of the classic arcade game, developed u
 6. **Timer Mode** (optional):
    - Allows timed matches to add variety to gameplay.
 
----
+
 
 ## Architecture/Structure of the Game
 ### **Main Components**
@@ -68,7 +68,7 @@ The Pong Game is a modern implementation of the classic arcade game, developed u
   - `is_singleplayer` for mode selection.
   - `left_score` and `right_score` for score tracking.
 
----
+
 
 ## How to Run and Deploy the Project
 ### **Prerequisites**
@@ -103,7 +103,7 @@ The Pong Game is a modern implementation of the classic arcade game, developed u
 3. For Windows users, create a `.exe` file with SFML DLLs bundled.
 4. For Linux users, ensure dependencies are installed or use static linking.
 
----
+
 
 ## Additional Notes
 - **Customization**: Modify game parameters like ball speed or paddle size in the source code.
@@ -112,7 +112,7 @@ The Pong Game is a modern implementation of the classic arcade game, developed u
   - Additional game modes like power-ups or obstacles.
 - **Bug Reporting**: Please report issues via the project repository or contact the developers directly.
 
----
+
 
 Enjoy the game!
 
